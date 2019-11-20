@@ -5,8 +5,9 @@ public class main {
 
     public static void main(String[] args) {
         final int amountOfItems = 10;
+        final int amountOfTries = 400;
         final int minWeight = 5;
-        final int maxWeight = 20;
+        final int maxWeight = 500;
         Item[] items = new Item[amountOfItems];
         int[] weight = new int[amountOfItems];
         Random r = new Random();
@@ -18,11 +19,9 @@ public class main {
         System.out.println(MyRandom.arrayToString(items));
         System.out.println("Weights:");
         System.out.println(MyRandom.arrayToString(weight));
-        System.out.println(MyRandom.weightedRandom(items, weight));
-        System.out.println(MyRandom.weightedRandom(items, weight));
-        System.out.println(MyRandom.weightedRandom(items, weight));
-        System.out.println(MyRandom.weightedRandom(items, weight));
-        System.out.println(MyRandom.weightedRandom(items, weight));
+        for (int i = 0; i <= amountOfTries; i++) {
+            System.out.println(MyRandom.weightedRandom(items, weight, true));
+        }
     }
 
 
